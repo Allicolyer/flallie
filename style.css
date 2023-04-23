@@ -1,0 +1,58 @@
+/* external css: flickity.css */
+
+/* Page Styles */
+html {
+  font-size: 1.125em;
+  box-sizing: border-box;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  box-sizing: border-box;
+  margin: 0;
+  background-color: #EFD06A
+}
+
+.title {
+  font-family: 'Lobster', sans-serif;
+  padding: 0 10%;
+  text-align: center;
+  color: #36454F
+}
+.carousel-cell {
+  width: calc(100vh - 150px);
+  height: calc(100vh - 150px);
+  margin-right: 10px;
+  background: #36454F;
+  display: flex;
+  align-items: center;
+}
+
+.carousel-cell-image {
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+  opacity: 0;
+  -webkit-transition: opacity 0.4s;
+  transition: opacity 0.4s;
+}
+
+/* fade in lazy loaded image */
+.carousel-cell-image.flickity-lazyloaded,
+.carousel-cell-image.flickity-lazyerror {
+  opacity: 1;
+}
+
+@media screen and (max-width: 800px) {
+  .flickity-page-dots {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .carousel-cell {
+    width: 100%;
+    height: unset;
+  }
+}
