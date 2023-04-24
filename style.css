@@ -11,20 +11,21 @@ body {
   min-height: 100vh;
   box-sizing: border-box;
   margin: 0;
-  background-color: #EFD06A
+  background-color: #efd06a;
 }
 
 .title {
   font-family: 'Lobster', sans-serif;
   padding: 0 10%;
   text-align: center;
-  color: #36454F
+  color: #36454f;
+  font-size: 2.25em;
 }
 .carousel-cell {
-  width: calc(100vh - 150px);
-  height: calc(100vh - 150px);
+  width: calc(100vmin - 150px);
+  height: calc(100vmin - 150px);
   margin-right: 10px;
-  background: #36454F;
+  background: #36454f;
   display: flex;
   align-items: center;
 }
@@ -48,11 +49,15 @@ body {
   .flickity-page-dots {
     display: none;
   }
+  .carousel-cell {
+    width: calc(100vmin - 75px);
+    height: calc(100vmin - 75px);
+  }
 }
 
 @media screen and (max-width: 500px) {
   .carousel-cell {
-    width: 100%;
-    height: unset;
+    width: calc(100vmin - 50px);
+    height: calc(100vmin - 50px);
   }
 }
