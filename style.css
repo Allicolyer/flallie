@@ -21,9 +21,57 @@ body {
   color: #36454f;
   font-size: 2.25em;
 }
+
+.top-button-spacer {
+  height: 50px;
+}
+
+.button {
+  margin: 20px;
+  min-width: 130px;
+  max-width: 180px;
+  display: block;
+  margin: 0 auto;
+  border-radius: 15px;
+  padding: 7.5px 15px;
+  border: 2px solid #36454f;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-size: 0.85em;
+  color: #ffffff;
+  border-color: #36454f;
+  background-color: #36454f;
+  text-align: center;
+  font-family: 'Lobster', sans-serif;
+  font-weight: normal;
+}
+.button .button-inline {
+  display: inline;
+}
+.button a {
+  text-decoration: none;
+  color: #ffffff;
+}
+.button:hover {
+  cursor: pointer;
+}
+.button:focus {
+  border-color: #36454f;
+  background-color: #36454f;
+}
+.button:disabled {
+  cursor: auto;
+  border-color: #ecf0f1;
+  background-color: #ecf0f1;
+}
+.button:disabled:hover {
+  font-weight: normal;
+}
+
 .carousel-cell {
   width: calc(100vmin - 150px);
-  height: calc(100vmin - 150px);
+  /* leaves room for the header and the button to add more photos */
+  height: calc(100vmin - 150px - 50px);
   margin-right: 10px;
   background: #36454f;
   display: flex;
